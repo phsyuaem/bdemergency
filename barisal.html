@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contacts</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .contact-list {
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: auto 1fr 1fr; /* First column for district name, the rest for buttons */
+            grid-gap: 10px; /* Space between grid items */
+            align-items: center; /* Vertically center items */
+            font-size:small;
+        }
+
+        .district-name {
+            font-weight: bold;
+            grid-column: 1 / 2;
+        }
+
+        .contact-button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .contact-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Mobile Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            .contact-list {
+                grid-template-columns: 1fr; /* Stack all items in one column */
+                text-align: center; /* Center align text */
+            }
+
+            .district-name {
+                grid-column: span 1;
+                margin-bottom: 10px; /* Add margin below district names */
+            }
+
+            .contact-button {
+                grid-column: span 1;
+                margin: 5px 0; /* Add vertical margin between buttons */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-list">
+        <div class="district-name">Barishal:</div>
+        <a href="tel:+8801769072556" class="contact-button">+8801769072556</a>
+        <a href="tel:+8801769072456" class="contact-button">+8801769072456</a>
+        <div></div>
+
+        <div class="district-name">Potuakhali:</div>
+        <a href="tel:+8801769073120" class="contact-button">+8801769073120</a>
+        <a href="tel:+8801769073122" class="contact-button">+8801769073122</a>
+        <div></div>
+        
+
+        <div class="district-name">Jhalkhati:</div>
+        <a href="tel:+8801769072108" class="contact-button">+8801769072108</a>
+        <a href="tel:+8801769072122" class="contact-button">+8801769072122</a>
+        <div></div>
+
+        <div class="district-name">Firojpur:</div>
+        <a href="tel:+8801769078298" class="contact-button">+8801769078298</a>
+        <a href="tel:+8801769078308" class="contact-button">+8801769078308</a>
+        <div></div>
+
+    </div>
+</body>
+</html>

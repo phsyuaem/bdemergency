@@ -1,0 +1,100 @@
+body {
+    background-color: #03ff0f;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#map {
+    position: relative;
+    width: 50%;
+    max-width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#dropdown {
+    position: absolute;
+    top: -50px;
+    z-index: 10;
+    font-size: 16px;
+    padding: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 300px;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+}
+
+.label {
+    visibility: hidden;
+    position: absolute;
+}
+
+.region {
+    fill: #ff0000;
+    stroke: #03ff0f;
+    stroke-width: 2px;
+    transition: fill 0.3s ease;
+}
+
+.region:hover {
+    fill: rgb(24, 155, 32);
+}
+
+.region:hover + .label {
+    visibility: visible;
+}
+
+.label-text {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    fill: black;
+}
+
+.label-box {
+    fill: white;
+}
+
+@media only screen and (max-width: 600px) {
+    #dropdown {
+        top: -40px;
+        font-size: 14px;
+    }
+
+    .label-text {
+        font-size: 10px;
+    }
+
+    #map {
+        position: relative;
+    width: 65%;
+    max-width: 65%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    }
+
+    svg {
+        width: 100%;
+        max-width: 100%;
+    }
+}
